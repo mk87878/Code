@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>for-of和foreach</title>
+</head>
+<body>
+
+</body>
+<script>
+    var a = ['A', 'B', 'C'];
+    a.name = 'Hello';
+    for (var i of a) {
+//        alert(i); // 'A', 'B', 'C'
+    }
+
+
+    var b = ['A', 'B', 'C'];
+    b.forEach(function (element, index, array) {
+        // element: 指向当前元素的值
+        // index: 指向当前索引
+        // array: 指向Array对象本身
+//        alert(element);
+    });
+
+    var s = new Set(['A', 'B', 'C']);
+    s.forEach(function (element, sameElement, set) {
+//        alert(element);
+    });
+
+
+    var m = new Map([[1, 'x'], [2, 'y'], [3, 'z']]);
+    m.forEach(function (value, key, map) {
+        alert(value);
+    });
+</script>
+</html>
