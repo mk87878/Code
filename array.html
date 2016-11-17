@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>array</title>
+</head>
+<body>
+<pre>
+slice截取array部分元素
+push向array末尾添加元素
+pop把数组最后一个元素删除
+unshift向array头部添加元素
+shift把数组第一个元素删除
+sort对array排序
+splice修改Array元素，从指定的索引开始删除若干元素，然后再从该位置添加若干元素
+concat连接数组
+join把array的每个元素用指定字符串连接起来
+</pre>
+</body>
+<script>
+    'use strict';//避免某些定义未使用var造成污染
+    var arr1 = [[1, 2, 3], [400, 500, 600], '-'];
+    var x = arr1[1][1];
+    alert(x);
+
+
+    var arr = ['小明', '小红', '大军', '阿黄'];
+    alert('欢迎'+arr.slice(0, 3).join(',')+'和'+arr.slice(3)+'同学！');
+
+</script>
+</html>
