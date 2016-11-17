@@ -56,8 +56,8 @@
       <file leaf-file-name="图片轮播.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/图片轮播.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+            <state relative-caret-position="180">
+              <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -91,6 +91,7 @@
         <option value="$PROJECT_DIR$/jQuery仿途牛多样式图片轮播代码/index.html" />
         <option value="$PROJECT_DIR$/jQuery仿途牛多样式图片轮播代码/js/index.js" />
         <option value="$PROJECT_DIR$/图片轮播.html" />
+        <option value="$PROJECT_DIR$/图片轮播2.html" />
       </list>
     </option>
   </component>
@@ -264,15 +265,15 @@
       <workItem from="1479201911430" duration="368000" />
       <workItem from="1479202936009" duration="1397000" />
       <workItem from="1479258444736" duration="11674000" />
-      <workItem from="1479344417164" duration="11765000" />
+      <workItem from="1479344417164" duration="12795000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28383000" />
+    <option name="totallyTimeSpent" value="29413000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="40" width="1930" height="1047" extended-state="1" />
+    <frame x="-7" y="40" width="1930" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17807487" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -522,10 +523,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/图片轮播2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-454">
+          <caret line="113" column="29" selection-start-line="113" selection-start-column="29" selection-end-line="113" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/图片轮播.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        <state relative-caret-position="180">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
           <folding />
         </state>
       </provider>
