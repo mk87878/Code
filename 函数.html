@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+</body>
+
+<script>
+    function abs(x) {
+        if (x >= 0) {
+            return x;
+        } else {
+            return -x;
+        }
+    }
+    /*
+     上述abs()函数的定义如下：
+
+     function指出这是一个函数定义；
+     abs是函数的名称；
+     (x)括号内列出函数的参数，多个参数以,分隔；
+     { ... }之间的代码是函数体，可以包含若干语句，甚至可以没有任何语句。
+     请注意，函数体内部的语句在执行时，一旦执行到return时，函数就执行完毕，并将结果返回。因此，函数内部通过条件判断和循环可以实现非常复杂的逻辑。
+    * */
+
+    var abs = function (x) {
+        if (x >= 0) {
+            return x;
+        } else {
+            return -x;
+        }
+    };
+    /*
+    在这种方式下，function (x) { ... }是一个匿名函数，它没有函数名。但是，这个匿名函数赋值给了变量abs，所以，通过变量abs就可以调用该函数。
+    上述两种定义完全等价，注意第二种方式按照完整语法需要在函数体末尾加一个;，表示赋值语句结束。
+     */
+
+
+</script>
+</html>
