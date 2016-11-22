@@ -5,21 +5,21 @@
     <script src="js/jquery.min.js"></script>
     <title>Title</title>
     <style>
-        .list {
+        .banner {
             width: 538px;
             height: 198px;
             overflow: hidden;
             margin: 50px auto;
         }
 
-        .list ul {
+        .banner ul {
             width: 2152px;
             height: 198px;
             margin: 0;
             padding: 0;
         }
 
-        .list ul li {
+        .banner ul>li {
             float: left;
             width: 538px;
         }
@@ -28,7 +28,7 @@
 
 
 <body>
-<div class="list" id="sidle">
+<div class="banner" id="slide">
     <ul>
         <li><img src="images/01.jpg" width="538" height="198"/></li>
         <li><img src="images/02.jpg" width="538" height="198"/></li>
@@ -45,7 +45,7 @@
             },
             auto: function () {
                 var _root = this,
-                        $ul = $("#sidle").find("ul"),
+                        $ul = $("#slide").find("ul"),
                         $lis = $ul.children("li"),
                         width = $lis.eq(0).width();
                 setInterval(function () {
