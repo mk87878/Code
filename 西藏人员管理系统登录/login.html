@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>西藏人员管理系统登录</title>
+    <link href="css/login.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+
+<div class="warp">
+    <h1 class="logo"><img src="images/logo.png" alt="西藏人员定位管理系统"></h1>
+
+    <!--登陆框部分 start-->
+
+    <!--登陆框主体 start-->
+    <form id="form" method="post">
+        <ol class="login clearfix">
+            <li><span class="login_icon login_userImg"></span><input class="login_inp" type="text"
+                                                                     placeholder="请输入您的账号">
+            </li>
+            <li><span class="login_icon login_pwdImg"></span><input class="login_inp" type="password"
+                                                                    placeholder="请输入您的密码">
+            </li>
+            <li><span class="login_icon login_codeImg"></span><input class="login_codeInp" type="text"
+                                                                     placeholder="请输入验证码">
+                <img class="login_code" src="images/login__11.jpg" alt="验证码"></li>
+            <li>
+                <button class="login_btn">登陆</button>
+            </li>
+        </ol>
+    </form>
+    <!--登陆框主体 end-->
+    <!--客户端下载 start-->
+    <div class="down_scan">
+        <a href="#">安卓客户端下载<img src="images/login_scanCode1.png" alt="安卓客户端下载二维码"></a>
+        <a href="#">iOS客户端下载<img src="images/login_scanCode2.png" alt="iOS客户端下载二维码"></a>
+        <!--客户端下载 end-->
+    </div>
+    <!--登陆框部分 end-->
+
+</div>
+</body>
+<script>
+    //    下载二维码显示控制js start
+    $(".down_scan>a").hover(function () {
+        $(this).children('img').show();
+    }, function () {
+        $(this).children('img').hide();
+    });
+
+    //    下载二维码显示控制js end
+
+</script>
+</html>
