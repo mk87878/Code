@@ -1,0 +1,173 @@
+@charset "utf-8"; /* CSS Document*/
+html { overflow-x: hidden; }
+body { position: relative; width: 100%; background: url(../images/bg.jpg) repeat-y center center; }
+a { text-decoration: none; }
+/*导航start*/
+.nav_bg { height: 85px; width: 100%; margin: 0 auto; border-bottom: 3px solid #c12c20; }
+.nav_box { position: relative; display: block; height: 85px; width: 1151px; margin: 0 auto; }
+.nav_box h1 { position: absolute; top: 15px; left: -15px; z-index: 10; display: block; width: 354px; height: 55px; }
+.nav { float: right; }
+.nav li { float: left; display: block; width: 90px; height: 85px; text-align: right; }
+.nav a { color: #333; font: bold 14px/85px "Microsoft YaHei"; }
+.nav a:hover { color: #c12c20; }
+/*导航end*/
+/*banner start*/
+.banner_img { display: block; width: 1920px; height: 631px; margin: 0 auto; }
+.banner_newsBg { width: 100%; height: 51px; background: url(../images/banner_line.png) repeat-x top; }
+.banner_news { width: 1151px; height: 50px; margin: 0 auto; padding-top: 7px; }
+.banner_notify { float: left; height: 33px; padding-left: 20px; background: url(../images/banner_notifyIcon.png) no-repeat left 4px; }
+.banner_notify span { font-size: 12px; color: #565656; }
+.banner_notify a { padding-right: 35px; font-size: 12px; color: #565656; text-decoration: none; }
+.banner_notify a:hover { color: #b00000; }
+.search_box { float: right; }
+.search_box input { width: 185px; padding-left: 25px; font: 12px/26px "Microsoft YaHei"; background: #fff url(../images/banner_search.png) no-repeat 5px center; border: solid 1px #c12c20; border-right: none; }
+.search_box button { float: right; width: 50px; height: 28px; color: #fff; border: solid 1px #8b0000; background-color: #8b0000; }
+.search_box button:hover { border: solid 1px #f80; background-color: #f80; }
+/*banner end*/
+/*轮播+新闻资讯 start*/
+.news01_box { width: 1151px; height: 362px; margin: 15px auto; overflow: hidden; }
+.news01_slide { float: left; width: 470px; height: 360px; border: solid 1px #e0e0e0; background-color: #fff; }
+.news01_warp01 { float: left; width: 505px; height: 360px; border: solid 1px #e0e0e0; border-left: none; }
+/*方框背景共享样式*/
+.bottomBg { background: #fff url(../images/news_bottomBg.png) no-repeat center bottom; }
+/*标题共享样式*/
+.title { padding-left: 25px; height: 54px; font: bold 16px/41px "Microsoft YaHei"; color: #8f0b07; background: url(../images/news_titleBg.png) no-repeat left top; }
+.title > a { float: right; width: 25px; padding-right: 15px; margin-right: 15px; color: #8b0000; font: normal 12px/41px "SimSun"; text-decoration: none; background: url(../images/title_more.png) no-repeat right center; }
+/*---------end-----------*/
+.news01_warp01 h2 { width: 480px; }
+.news01_firNew { display: block; width: 470px; height: 80px; margin: 0 auto; padding: 12px 0; border-bottom: dashed 1px #c4c4c4; }
+.news01_firNew h3 { font: bold 16px/36px "Microsoft YaHei"; }
+.news01_firNew p { color: #666; font: 12px/20px "SimSun"; }
+.news01_firNew p > a { color: #ff7a05; font: 12px/20px "SimSun"; }
+/*列表共享样式*/
+.list a { display: block; padding-left: 10px; color: #444; }
+.list a:hover { color: #b00000; }
+.list span { float: right; font: 12px/28px "SimSun"; color: #999; }
+.list a:hover > span { color: #b00000; }
+/*---------end-----------*/
+.news01_list { width: 470px; margin: 0 auto; padding-top: 10px; }
+.news01_list a { font: 14px/30px "SimSun"; background: url(../images/news_icon.jpg) no-repeat left center; }
+.news01_contact { float: left; width: 160px; height: 360px; margin-left: 12px; }
+.news01_contact a { display: block; width: 107px; height: 25px; padding: 27px; margin-bottom: 15px; color: #fff; text-align: center; font: bold 16px/24px "Microsoft YaHei"; background: #c12c20; }
+.news01_contact img { float: left; }
+.news01_contact a:hover { background: #b00000; }
+/*图片轮播*/
+.img_box { position: relative; width: 450px; height: 338px; margin: 10px auto 0 auto; overflow: hidden; }
+.img_list { position: relative; width: 2250px; height: 338px; overflow: hidden; }
+.img_list li { float: left; display: inline-block; }
+.img_box img { z-index: -1; width: 450px; height: 338px; }
+.info { position: absolute; left: 0; top: 298px; float: left; }
+.info li { display: none; }
+.info span { background-color: rgba(0, 0, 0, 0.6); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000); }
+.bg { position: absolute; left: 0; display: inline-block; width: 450px; padding: 0 10px 0 10px; font: 14px/40px SimSun; color: #fff; }
+.info .infoOn { display: inline; }
+.img_box ol { position: absolute; left: 360px; top: 315px; width: 120px; height: 18px; }
+.img_box ol li { float: left; width: 10px; height: 10px; margin-right: 6px; text-align: center; line-height: 18px; background-color: rgba(255, 255, 255, 0.6); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000); -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
+/*hover*/
+.num_curr { background-color: #fff; }
+.num li:hover { background-color: #fff; }
+/*轮播+新闻资讯 end*/
+/*展宣活动与网上陈列馆 start*/
+.news02_box { width: 1151px; height: 350px; margin: 0 auto; }
+.news02_box01 { float: left; width: 592px; height: 346px; border: 1px solid #e0e0e0; }
+.news02_list { width: 568px; margin: 10px auto 0 auto; }
+.news02_box01 h2 { width: 592px; }
+.news02_list a { font: 14px/28px "SimSun"; background: url(../images/list_icon02.png) no-repeat left center; }
+.news02_box01 > .more { width: 553px; }
+/*显示在方框底部更多共享样式*/
+.more { margin: 0 auto; display: block; }
+.more a { padding-right: 15px; color: #8b0000; font: 12px/28px "SimSun"; background: url(../images/title_more.png) no-repeat right center; }
+/*---------end-----------*/
+.news02_box02 { float: left; width: 555px; height: 346px; border: 1px solid #e0e0e0; border-left: none; }
+.news02_imgBox { width: 540px; margin: 8px auto; }
+.news02_imgBox a { position: relative; float: left; display: block; width: 165px; height: 123px; margin: 7px; text-align: center; }
+.news02_imgBox a > span { position: absolute; bottom: 0; left: 0; display: block; width: 165px; height: 30px; color: #fff; font: 13px/30px "SimSun"; background: rgba(0, 0, 0, 0.6); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000); }
+.news02_imgBox a:hover > span { color: #f1e307; }
+/*展宣活动与网上陈列馆 end*/
+/*编研工作志愿者活动博物馆之友文创产品 start*/
+.news03_box { width: 1151px; height: 870px; margin: 15px auto; }
+.news03 { float: left; width: 573px; height: 435px; border: 1px solid #e0e0e0; }
+.news_content { position: relative; width: 414px; height: 90px; padding-left: 132px; margin: 10px auto; }
+.news_content img { position: absolute; top: 0; left: 0; }
+.news_content h3 { color: #222; font: 14px/28px "Microsoft YaHei"; }
+.news_content p { color: #888; text-indent: 2em; font: 12px/22px "SimSun"; }
+.news_content a { color: #ff7a05; }
+.bottomBg hr { height: 1px; background-color: #ededed; }
+.news03_list { width: 546px; margin: 10px auto 0 auto; }
+.news03_list a { font: 14px/28px "SimSun"; background: url(../images/list_icon02.png) no-repeat left center; }
+.news03 > .more { width: 526px; }
+/*去掉border共享样式*/
+.BorderLNone { border-left: none; }
+.BorderTNone { border-top: none; }
+/*---------end-----------*/
+/*编研工作志愿者活动博物馆之友文创产品 end*/
+/*生平简介小平故事邓小平研究敬献鲜花 start*/
+.news04_box { position: relative; width: 871px; height: 643px; padding-left: 280px; margin: 15px auto; }
+.news04_box01 { position: absolute; top: 0; left: 0; z-index: 10; width: 280px; height: 643px; text-align: center; border: 1px solid #e0e0e0; }
+.news04_box01 h2 { text-align: left; }
+.news04_content { width: 250px; margin: 15px auto; }
+.news04_content h3 { color: #333; font: bold 14px/28px "Microsoft YaHei"; }
+.news04_content p { color: #444; text-indent: 2em; text-align: left; font: 14px/24px "SimSun"; }
+.news04_content a { color: #ff7a05; }
+/*小平故事邓小平研究*/
+.news04_box02 { float: left; width: 434px; height: 320px; border: 1px solid #e0e0e0; border-left: none; }
+.news04_list { width: 400px; margin: 10px auto 0 auto; }
+.news04_list a { font: 14px/28px "SimSun"; background: url(../images/list_icon02.png) no-repeat left center; }
+.news04_box02 > .more { width: 380px; }
+/*敬献鲜花*/
+.news04_flowerBox { float: left; width: 869px; height: 322px; border-right: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; }
+.news04_flower { width: 846px; height: 89px; margin: 20px auto 0 auto; }
+.news04_flower li { position: relative; float: left; display: block; width: 84px; margin: 0 5px; }
+.news04_flower i { display: block; width: 84px; text-align: center; font: normal 12px/28px "SimSun"; }
+.news04_flower span { position: absolute; top: 0; left: 0; display: none; width: 80px; height: 60px; border: 2px solid #b00000; background: url(../images/news04_flowerSlt.png) no-repeat right bottom; }
+.news04_comment { width: 839px; height: 144px; margin: 0 auto; }
+.news04_comment p { margin-top: 12px; }
+.news04_comment p > span { float: left; font: normal 12px/28px "SimSun"; }
+.news04_comment textarea { width: 796px; height: 84px; border: 1px solid #e0e0e0; }
+.news04_btn { display: block; width: 500px; padding-left: 40px; }
+.news04_btn button { width: 86px; height: 30px; color: #fff; font: bold 14px/30px "Microsoft YaHei"; background-color: #f6921d; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
+.news04_comment button:hover { background-color: #f0780d; }
+/*生平简介小平故事邓小平研究敬献鲜花 end*/
+/*快捷链接导航 start*/
+.boxUrl { width: 1151px; height: 50px; margin: 0 auto; }
+select::-ms-expand { display: none; }
+.boxUrl select { width: 370px; height: 28px; border: 1px solid #e0e0e0; padding: 2px; margin-right: 15px; font: 12px/21px "Microsoft YaHei"; background: url(../images/select_icon.png) no-repeat 345px center; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; appearance: none; -moz-appearance: none; -webkit-appearance: none; }
+.boxUrl select:last-child { margin: 0; }
+/*快捷链接导航 end*/
+/*网站地图导航 start*/
+.subnav_bg { width: 100%; height: 38px; background: url(../images/subnav_bg.jpg) repeat-x center; }
+.subnav_box { width: 577px; height: 20px; margin: 0 auto; padding: 8px 0; text-align: center; background: url(../images/subnav_bg02.png) no-repeat center 12px; }
+.subnav_box a { display: inline-block; *display: inline; *zoom: 1; width: 62px; text-align: center; color: #fff; font: 12px/16px "SimSun"; border-right: 1px solid #d29d9c; }
+.subnav_box a:last-child { border: none; }
+/*网站地图导航 end*/
+/*版权 start*/
+.cprt { width: 1151px; height: 50px; margin: 0 auto; color: #333; text-align: center; font: 12px/24px "SimSun"; }
+.cprt a { color: #333; text-align: center; font: 12px/24px "SimSun"; }
+/*版权 end*/
+/*悬浮导航 start*/
+.floatNav_box { position: fixed; bottom: 70px; right: 10px; z-index: 99; display: none; height: 36px; width: 36px; }
+.floatNav { position: absolute; bottom: 36px; left: 0; z-index: 100; float: left; display: block; width: 36px; height: 94px; }
+.floatNav { display: none; }
+.floatNav a { display: block; height: 36px; width: 36px; margin-bottom: 10px; }
+.floatNav_box { background: url(../images/floatNav_icon.png) center bottom no-repeat; }
+.floatNav_box:hover { background: url(../images/floatNav_iconhover.png) center bottom no-repeat; }
+.floatNav_box:hover > .floatNav { display: block; animation: smalltoB 0.25s; }
+.floatNav_01 { position: relative; background: url(../images/floatNav_icon.png) top center no-repeat; }
+.floatNav_02 { position: relative; background: url(../images/floatNav_icon.png) center center no-repeat; }
+.floatNav_01:hover { display: block; background: url(../images/floatNav_iconhover.png) top center no-repeat; }
+.floatNav_02:hover { display: block; background: url(../images/floatNav_iconhover.png) center center no-repeat; }
+.floatNav a > img { position: absolute; right: 45px; top: 6px; width: 125px; height: 28px; display: none; }
+.floatNav_box a:hover > img { display: block; animation: smalltoB 0.25s; }
+/*从中心小变大动画效果*/
+@-webkit-keyframes smalltoB {
+    0% { -moz-transform: scale(0, 0); -webkit-transform: scale(0, 0); -o-transform: scale(0, 0); }
+    100% { -moz-transform: scale(1, 1); -webkit-transform: scale(1, 1); -o-transform: scale(1, 1); }
+}
+@-moz-keyframes smalltoB {
+    0% { -moz-transform: scale(0, 0); -webkit-transform: scale(0, 0); -o-transform: scale(0, 0); }
+    100% { -moz-transform: scale(1, 1); -webkit-transform: scale(1, 1); -o-transform: scale(1, 1); }
+}
+@keyframes smalltoB {
+    0% { -moz-transform: scale(0, 0); -webkit-transform: scale(0, 0); -o-transform: scale(0, 0); }
+    100% { -moz-transform: scale(1, 1); -webkit-transform: scale(1, 1); -o-transform: scale(1, 1); }
+}
