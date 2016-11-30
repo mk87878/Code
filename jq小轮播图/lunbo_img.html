@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-1.8.3.min.js"></script>
+    <style>
+        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, dd, dl, dt, li, ol, ul,input,select,button,textarea { padding:0; margin:0; border:none;}
+        input,button,select,textarea,a,img{outline:none; }/*去掉超链接或按钮点击时出现的虚线框黄色边框*/
+        ::-moz-focus-inner{border:0;}/*火狐的私有属性去掉点击时边框*/
+        body {background-color: #fcfcfa; font-size:12px; width:100%; overflow-x:hidden; min-width: 1200px; font-family:"Microsoft YaHei","Arial","SimSun";}
+        html{ width:100%;height:100%;}
+        a img {	border:none;}
+        ul, ul li, ol li, li {	list-style:none;}
+        table {	border-collapse: collapse;border-spacing:0;}
+        input, textarea{border: 0;}
+        .clearfix:after{visibility: hidden;display: block;font-size: 0;content: ".";clear: both;height: 0;}
+        * html .clearfix {zoom:1;}
+        *:first-child + html .clearfix {zoom:1;}
+        img{vertical-align:top;}
+        .fl {float:left;}
+        .fr {float:right;}
+        .none{display:none;}
+        a{cursor:pointer; text-decoration:none;}
+        a:hover{text-decoration: none;}
+        i{font-style:normal;}
+    </style>
+</head>
+    <div class="img_box">
+        <ul class="img_list">
+            <li><a href="">
+                <img src=" images/scroll_img.png" alt="邓小平故居陈列馆游人如织"/>
+            </a></li>
+            <li><a href="">
+                <img src=" images/scroll_img.png" alt="邓小平故居陈列馆游人如织"/>
+            </a></li>
+            <li><a href="">
+                <img src=" images/scroll_img.png" alt="邓小平故居陈列馆游人如织"/>
+            </a></li>
+            <li><a href="">
+                <img src=" images/scroll_img.png" alt="邓小平故居陈列馆游人如织"/>
+            </a></li>
+            <li><a href="">
+                <img src=" images/scroll_img.png" alt="邓小平故居陈列馆游人如织"/>
+            </a></li>
+        </ul>
+        <ul class="info">
+            <li class="infoOn"><span class="bg">邓小平故居陈列馆游人如织</span></li>
+            <li> <span class="bg">邓小平故居陈列馆游人如织2</span></li>
+            <li> <span class="bg">邓小平故居陈列馆游人如织3</span></li>
+            <li><span class="bg">邓小平故居陈列馆游人如织4</span></li>
+            <li><span class="bg">邓小平故居陈列馆游人如织5</span></li>
+        </ul>
+        <ol class="num">
+            <li class="num_curr"><a href="">1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">4</a></li>
+            <li><a href="">5</a></li>
+        </ol>
+    </div>
+</div>
+<script>
+    $(function() {
+        //图片轮播
+        var curIndex = 0, //当前index
+                imgLen = $(".img_list li").length; //图片总数
+        var autoChange = setInterval(function () {
+            if (curIndex < imgLen - 1) {
+                curIndex++;
+            } else {
+                curIndex = 0;
+            }
+            changeTo(curIndex);
+        }, 2500);
+        //对右下角按钮index进行事件绑定处理等
+        $(".num").find("li").each(function (item) {
+            $(this).hover(function () {
+                clearInterval(autoChange);
+                changeTo(item);
+                curIndex = item;
+            }, function () {
+                autoChangeAgain();
+            });
+        });
+        //清除定时器时候的重置定时器--封装
+        function autoChangeAgain() {
+            autoChange = setInterval(function () {
+                if (curIndex < imgLen - 1) {
+                    curIndex++;
+                } else {
+                    curIndex = 0;
+                }
+                //调用变换处理函数
+                changeTo(curIndex);
+            }, 2500);
+        }
+        function changeTo(num) {
+            var goLeft = num * 450;
+            $(".img_list").animate({left: "-" + goLeft + "px"}, 450);
+            $(".info").find("li").removeClass("infoOn").eq(num).addClass("infoOn");
+            $(".num").find("li").removeClass("num_curr").eq(num).addClass("num_curr");
+        }
+    })
+</script>
+</body>
+</html>

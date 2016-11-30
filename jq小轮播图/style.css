@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*图片轮播*/
+.img_box {
+    position: relative;
+    float: left;
+    width: 450px;
+    height: 338px;
+    overflow: hidden;
+}
+.img_list {
+    position: relative;
+    width: 2250px;
+    height: 338px;
+    overflow: hidden;
+}
+.img_list li {
+    float: left;
+    display: inline-block;
+}
+.img_box img {
+    z-index: -1;
+    width:450px;
+    height: 338px;
+}
+.info {
+    position: absolute;
+    left:0;
+    top:298px;
+    float: left;
+}
+.info li {
+    display:none;
+}
+.info span {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.bg {
+    position: absolute;
+    left:0;
+    display: inline-block;
+    width:450px;
+    padding: 0 10px 0 10px;
+    font: 14px/40px SimSun;
+    color: #fff;
+}
+.info .infoOn {
+    display: inline;
+}
+.img_box ol {
+    position: absolute;
+    left: 360px;
+    top: 315px;
+    width: 120px;
+    height: 18px;
+}
+.img_box ol li {
+    float: left;
+    width: 10px;
+    height: 10px;
+    margin-right: 6px;
+    text-align: center;
+    line-height: 18px;
+    background-color: rgba(255, 255, 255, 0.6);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+/*hover*/
+.num_curr {
+    background-color: #fff!important;
+}
+.num li:hover {
+    background-color: #fff;
+}
