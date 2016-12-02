@@ -1,78 +1,78 @@
 <!DOCTYPE html >
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>图片轮播 jq(左右切换)</title>
     <style type="text/css">
-        body,div,ul,li,a,img{margin: 0;padding: 0;}
-        ul,li{list-style: none;}
-        a{text-decoration: none;}
-        #imgList img{width: 400px ; height: 200px;}
-        #banner{position:relative;width: 400px;height: 200px; overflow: hidden;}
-        .imgList{position:relative;width:2000px;height:200px;z-index: 10;overflow: hidden;}
-        .imgList li{float:left;display: inline;}
-        #prev, #next{position: absolute;top:80px;z-index: 20;cursor: pointer;opacity: 0.3;filter:alpha(opacity=30);}
-        #prev{left: 10px;}
-        #next{right: 10px;}
+        body, div, ul, li, a, img { margin: 0; padding: 0; }
+        ul, li { list-style: none; }
+        a { text-decoration: none; }
+        #imgList img { width: 400px; height: 200px; }
+        #banner { position: relative; width: 400px; height: 200px; overflow: hidden; }
+        .imgList { position: relative; width: 2000px; height: 200px; z-index: 10; overflow: hidden; }
+        .imgList li { float: left; display: inline; }
+        #prev, #next { position: absolute; top: 80px; z-index: 20; cursor: pointer; opacity: 0.3; filter: alpha(opacity=30); }
+        #prev { left: 10px; }
+        #next { right: 10px; }
         #prev:hover,
-        #next:hover{opacity: 0.7;filter:alpha(opacity=70);}
-        .bg{position: absolute;bottom: 0;width: 400px;height: 40px;z-index:20;opacity: 0.4;filter:alpha(opacity=40);background: black;}
-        .infoList{position: absolute;left: 10px;bottom: 10px;z-index: 30;}
-        .infoList li{display: none;}
-        .infoList .infoOn{display: inline;color: white;}
-        .indexList{position: absolute;right: 10px;bottom: 5px;z-index: 30;}
-        .indexList li{float: left;margin-right: 5px;padding: 2px 4px;border: 1px solid #000;background: grey;cursor: pointer;}
-        .indexList .indexOn{background: #fff;font-weight: bold;color: #000;}
+        #next:hover { opacity: 0.7; filter: alpha(opacity=70); }
+        .bg { position: absolute; bottom: 0; width: 400px; height: 40px; z-index: 20; opacity: 0.4; filter: alpha(opacity=40); background: black; }
+        .infoList { position: absolute; left: 10px; bottom: 10px; z-index: 30; }
+        .infoList li { display: none; }
+        .infoList .infoOn { display: inline; color: white; }
+        .indexList { position: absolute; right: 10px; bottom: 5px; z-index: 30; }
+        .indexList li { float: left; margin-right: 5px; padding: 2px 4px; border: 1px solid #000; background: grey; cursor: pointer; }
+        .indexList .indexOn { background: #fff; font-weight: bold; color: #000; }
     </style>
     <script src="jquery-1.8.3.min.js"></script>
 </head>
 <body>
 <!-- 轮播部分 -->
-    <div id="banner">
-        <!-- 图片部分 -->
-        <ul class="imgList">
-            <li><a href="#"><img src="images/scroll_img.png" alt="1"></a></li>
-            <li><a href="#"><img src="images/scroll_img.png" alt="2"></a></li>
-            <li><a href="#"><img src="images/scroll_img.png" alt="3"></a></li>
-            <li><a href="#"><img src="images/scroll_img.png" alt="4"></a></li>
-            <li><a href="#"><img src="images/scroll_img.png" alt="5"></a></li>
-        </ul>
-        <img src="images/prev.png" id="prev">
-        <img src="images/next.png" id="next">
-        <div class="bg"></div> <!-- 图片底部背景层部分-->
-        <ul class="infoList"><!-- 图片左下角文字信息部分 -->
-            <li class="infoOn"> 0001</li>
-            <li> 0002</li>
-            <li> 0003</li>
-            <li> 0004</li>
-            <li> 0005</li>
-        </ul>
-        <ul class="indexList"><!-- 图片右下角序号部分 -->
-            <li class="indexOn">1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-        </ul>
-    </div>
+<div id="banner">
+    <!-- 图片部分 -->
+    <ul class="imgList">
+        <li><a href="#"><img src="images/scroll_img.png" alt="1"></a></li>
+        <li><a href="#"><img src="images/scroll_img.png" alt="2"></a></li>
+        <li><a href="#"><img src="images/scroll_img.png" alt="3"></a></li>
+        <li><a href="#"><img src="images/scroll_img.png" alt="4"></a></li>
+        <li><a href="#"><img src="images/scroll_img.png" alt="5"></a></li>
+    </ul>
+    <img src="images/prev.png" id="prev">
+    <img src="images/next.png" id="next">
+    <div class="bg"></div> <!-- 图片底部背景层部分-->
+    <ul class="infoList"><!-- 图片左下角文字信息部分 -->
+        <li class="infoOn"> 0001</li>
+        <li> 0002</li>
+        <li> 0003</li>
+        <li> 0004</li>
+        <li> 0005</li>
+    </ul>
+    <ul class="indexList"><!-- 图片右下角序号部分 -->
+        <li class="indexOn">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</div>
 <script>
     var curIndex = 0,//定义当前Index，并初始化为0
-        imgLen = $('.imgList li').length;//计算图总张书
+            imgLen = $('.imgList li').length;//计算图总张书
     //轮播效果变化
     function changeTo(num) {
         var goLeft = num * 400;
-        $('.imgList').animate({left:'-'+goLeft+'px'},500);
+        $('.imgList').animate({left: '-' + goLeft + 'px'}, 500);
         $('.infoList').find('li').removeClass('infoOn').eq(num).addClass('infoOn');
         $('.indexList').find('li').removeClass('infoOn').eq(num).addClass('infoOn');
     }
     var autoChange = setInterval(function () {
-        if(curIndex < imgLen-1){
+        if (curIndex < imgLen - 1) {
             curIndex++;
-        }else {
+        } else {
             curIndex = 0;
         }
         changeTo(curIndex);
-    },2500)
+    }, 2500)
 
 </script>
 </body>
