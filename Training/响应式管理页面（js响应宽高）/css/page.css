@@ -1,38 +1,25 @@
  @charset "utf-8";
 /* CSS Document */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, dd, dl, dt, li, ol, ul, input, select, button, textarea, hr { padding: 0; margin: 0; border: none; }
-input, button, select, textarea, a, img { outline: none; }/*去掉超链接或按钮点击时出现的虚线框黄色边框*/
- ::-moz-focus-inner { border:0; }/*火狐的私有属性去掉点击时边框*/
-body, html { width: 100%; font-family: "Microsoft YaHei", "Arial", "SimSun"; }
+* { padding: 0; margin: 0; text-decoration: none; border: none; outline: none; }/*去掉超链接或按钮点击时出现的虚线框黄色边框*/
+::-moz-focus-inner {border:0;}/*火狐的私有属性去掉点击时边框*/
+body, html { width: 100%; height: 100%; overflow: hidden; font-family: "Microsoft YaHei", "Arial", "SimSun"; }
 ul, ul li, ol li, li { list-style: none; }
-a, img, input, textarea { border: none; }
-table { border-collapse: collapse; border-spacing: 0; }
-.clearfix:after { visibility: hidden; display: block; font-size: 0; content: "."; clear: both; height: 0; }
-* html .clearfix { zoom: 1; }
-*:first-child + html .clearfix { zoom: 1; }
 .fl { float: left; }
 .fr { float: right; }
-.none { display: none; }
-body, html, form { height: 100%; overflow: hidden; }
-a { text-decoration: none; }
 /*head start*/
 .head { width: 100%; height: 78px; background-color: #1985c6; }
-.head h2 { padding-left: 30px; font-size: 24px; color: #fff; line-height: 78px; }
+.head h1 { padding-left: 30px; font-size: 24px; color: #fff; line-height: 78px; }
 /*head end*/
-  /*main start*/
+ /*main start*/
 .main { width: 100%; background-color: #f5f5f5; }
-.menu { float: left; display: block; width: 200px; height: 100%; background-color: #115d8b; }
-.menu a { background: url(../images/line_02.jpg) no-repeat bottom; }
-.menu a>span { display: block; height: 70px; padding-left: 50px; color: #fff; font: bold 15px/70px "Microsoft YaHei"; background: url(../images/icon.png) no-repeat 12px center; }
-.menu span:hover, .menu a>.active { color: #41c7ff; background: url(../images/iconHover.png) no-repeat 12px center; }
-.content { float: left; }
+.menu { width: 200px; height: 100%; background-color: #115d8b; }
+.menu a { display: block; height: 70px; padding-left: 50px; color: #fff; font: bold 15px/70px "Microsoft YaHei"; background: url(../images/icon.png) no-repeat 12px center; border-bottom: 1px solid #166da3; }
+.menu a:hover, .menu .active { color: #41c7ff; background: url(../images/iconHover.png) no-repeat 12px center; }
 .content_info { display: block; padding: 30px; }
 .content_inp>span { display: block; padding: 0 30px; height: 40px; }
 .content_inp input { width: 270px; height: 30px; padding: 0 5px; font: 14px/30px "Microsoft YaHei"; border: 1px solid #b7b7b7; }
 .content_inp input, .foot button { -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
-.foot { width: 94%; height: 54px; padding: 24px 3% 0 3%; background-color: #1985c6; float: right; }
-.back { float: left; width: 70px; height: 30px; }
-.btn { float: right; }
-.foot button { float: left; display: block; width: 70px; height: 30px; margin-right: 20px; text-align: center; color: #fff; font: bold 12px/30px "simsum"; border: 1px solid #41c7ff; background-color: #41c7ff; }
-.foot button:hover { border: 1px solid #115d8b; background-color: #115d8b; }
-  /*main end*/
+.foot { width: 94%; height: 54px; padding: 24px 3% 0 3%; background-color: #1985c6; }
+.foot button { width: 70px; height: 30px; margin-right: 20px; text-align: center; color: #fff; font: bold 12px/30px "simsum"; background-color: #41c7ff; }
+.foot button:hover { background-color: #115d8b; }
+ /*main end*/
