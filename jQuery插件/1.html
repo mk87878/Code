@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <script src="../js/jquery-1.8.3.min.js"></script>
+    <title>Title</title>
+    <style>
+        div {
+            height: 350px;
+            width: 400px;
+            background-color: #e00c00;
+        }
+    </style>
+</head>
+
+<body>
+<div>
+    sdfsadfsa
+</div>
+</body>
+
+
+<script>
+    (function ($) {
+        $.fn.m​​axHeight = function () {
+            var max = 0;
+            this.each(function () {
+                max = Math.max(max, $(this).height());
+            });
+            return max;
+        };
+    })(jQuery);
+
+
+    var height = $('div').maxHeight(); //返回高度最大的div元素的高度
+    console.log(height);
+</script>
+</html>
