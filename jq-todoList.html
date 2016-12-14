@@ -8,10 +8,10 @@
     <script src="js/jquery-1.8.3.min.js"></script>
     <title>To Do List jq版本</title>
     <style>
-        body{
+        body {
             padding: 20px;
         }
-        button,input{
+        button, input {
             -webkit-border-radius: 3px;
             -moz-border-radius: 3px;
             border-radius: 3px;
@@ -24,29 +24,29 @@
             -moz-box-shadow: 1px 1px rgba(0, 0, 0, 0.2);
             box-shadow: 1px 1px rgba(0, 0, 0, 0.2);
         }
-        #add{
+        #add {
             background-color: #3879d9;
         }
-        .delete{
+        .delete {
             margin-left: 10px;
             background-color: red;
         }
-        #new-text{
+        #new-text {
             padding: 1px 5px;
             height: 20px;
             border: 1px solid #3879d9;
         }
-        .finish{
+        .finish {
             line-height: 28px;
             margin-right: 5px;
         }
-        #list{
+        #list {
             margin: 10px 0;
         }
-        #list li{
+        #list li {
             height: 30px;
             display: block;
-            font:16px/30px "Microsoft YaHei";
+            font: 16px/30px "Microsoft YaHei";
         }
     </style>
 </head>
@@ -56,15 +56,17 @@
 <button id="add">添加</button>
 
 <ul id="list">
-    <li class="item"><input type="checkbox" class="finish">测试样式 <button class="delete">删除</button></li>
+    <li class="item"><input type="checkbox" class="finish">测试样式
+        <button class="delete">删除</button>
+    </li>
 </ul>
 
 </body>
 <script>
     function addListItem() {
-        var textToAdd = $('#new-text').val();                    // The finish class is just for css styling
+        var textToAdd = $('#new-text').val();// 获取输入的内容
         $('#list').append('<li class="item"><input type="checkbox" class="finish" />' + textToAdd + '<button class="delete">删除</button></li>');
-        $('#new-text').val('');
+        $('#new-text').val('');//清空文本框
     }
 
     function deleteItem() {
