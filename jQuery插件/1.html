@@ -4,40 +4,85 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="renderer" content="webkit">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="">
     <script src="../js/jquery-1.8.3.min.js"></script>
     <title>Title</title>
     <style>
         div {
-            height: 350px;
-            width: 400px;
-            background-color: #e00c00;
+            height: 150px;
+            width: 700px;
+            background-color: #2c8661;
         }
     </style>
 </head>
 
 <body>
-<div>
-    sdfsadfsa
+<div id="test-highlight1">
+    <p>什么是<span>jQuery</span></p>
+    <p><span>jQuery</span>是目前最流行的<span>JavaScript</span>库。</p>
+</div>
+<hr>
+<div id="test-highlight2">
+    <p>什么是<span>jQuery</span> <span>Plugin</span></p>
+    <p>编写<span>jQuery</span> <span>Plugin</span>可以用来扩展<span>jQuery</span>的功能。</p>
+</div>
+
+<hr>
+<div id="test-highlight">
+    <p>如何编写<span>jQuery</span> <span>Plugin</span></p>
+    <p>编写<span>jQuery</span> <span>Plugin</span>，要设置<span>默认值</span>，并允许用户修改<span>默认值</span>，或者运行时传入<span>其他值</span>。</p>
 </div>
 </body>
 
 
 <script>
-    (function ($) {
-        $.fn.m​​axHeight = function () {
-            var max = 0;
-            this.each(function () {
-                max = Math.max(max, $(this).height());
-            });
-            return max;
-        };
-    })(jQuery);
+    //    第一版
+    $.fn.highlight1 = function () {
+        // this已绑定为当前jQuery对象:
+        this.css('backgroundColor', '#fffceb').css('color', '#d85030');
+        return this;
+    };
+    // 调用
+    $('#test-highlight1 span').highlight1();
 
 
-    var height = $('div').maxHeight(); //返回高度最大的div元素的高度
-    console.log(height);
+    //第二版
+    $.fn.highlight2 = function (options) {
+        // 要考虑到各种情况:
+        // options为undefined
+        // options只有部分key
+        var bgcolor = options && options.backgroundColor || '#fffceb';
+        var color = options && options.color || '#d85030';
+        this.css('backgroundColor', bgcolor).css('color', color);
+        return this;
+    };
+    // 调用
+    $('#test-highlight2 span').highlight2({
+        backgroundColor: '#fff',
+        color: '#000'
+    });
+
+    //    第三版
+    $.fn.highlight = function (options) {
+        // 合并默认值和用户设定值:
+        var opts = $.extend({}, $.fn.highlight.defaults, options);
+        this.css('backgroundColor', opts.backgroundColor).css('color', opts.color);
+        return this;
+    };
+    // 设定默认值:
+    $.fn.highlight.defaults = {
+        color: '#d85030',
+        backgroundColor: '#fff8de'
+    };
+    // 调用
+    $.fn.highlight.defaults.color = '#659f13';
+    $.fn.highlight.defaults.backgroundColor = '#f2fae3';
+    $('#test-highlight p:first-child span').highlight();
+
+    $('#test-highlight p:last-child span').highlight({
+        color: '#dd1144'
+    });
+
+
+
 </script>
 </html>
