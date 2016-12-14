@@ -12,14 +12,17 @@
             padding: 20px;
         }
         button,input{
-            -webkit-border-radius: 5px;
-            -moz-border-radius: 5px;
-            border-radius: 5px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
         }
         button {
             width: 40px;
             height: 24px;
             color: #fff;
+            -webkit-box-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+            box-shadow: 1px 1px rgba(0, 0, 0, 0.2);
         }
         #add{
             background-color: #3879d9;
@@ -35,6 +38,7 @@
         }
         .finish{
             line-height: 28px;
+            margin-right: 5px;
         }
         #list{
             margin: 10px 0;
@@ -52,7 +56,7 @@
 <button id="add">添加</button>
 
 <ul id="list">
-    <li class="item"><input type="checkbox">测试样式 <button class="delete">删除</button></li>
+    <li class="item"><input type="checkbox" class="finish">测试样式 <button class="delete">删除</button></li>
 </ul>
 
 </body>
