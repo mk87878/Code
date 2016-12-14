@@ -16,6 +16,8 @@
 </head>
 
 <body>
+
+
 <div id="test-highlight1">
     <p>什么是<span>jQuery</span></p>
     <p><span>jQuery</span>是目前最流行的<span>JavaScript</span>库。</p>
@@ -29,8 +31,34 @@
 <hr>
 <div id="test-highlight">
     <p>如何编写<span>jQuery</span> <span>Plugin</span></p>
-    <p>编写<span>jQuery</span> <span>Plugin</span>，要设置<span>默认值</span>，并允许用户修改<span>默认值</span>，或者运行时传入<span>其他值</span>。</p>
+    <p>编写<span>jQuery</span> <span>Plugin</span>，要设置<span>默认值</span>，并允许用户修改<span>默认值</span>，或者运行时传入<span>其他值</span>。
+    </p>
 </div>
+
+<pre>
+(function(arg){...})(param)
+这就相当于定义了一个参数为arg的匿名函数，并且将param作为参数来调用这个匿名函数。
+
+而(function($){...}) (jQuery)则是一样的，之所以只在形参使用$，是为了不与其他库冲突，所以实参用jQuery。
+
+好处有:
+
+1 避免全局依赖；
+
+2 避免第三方破坏；
+
+3 兼容jquery操作符"$"和jquery；
+
+-------------------------------------------------
+1、形参变量只有在被调用时才分配内存单元，在调用结束时，即刻释放所分配的内存单元。因此，形参只在函数内部有效。
+    函数调用结束返回主调用函数后则不能再使用该形参变量。
+2、实参可以是常量、变量、表达式、函数等，无论实参是何种类型的量，在进行函数调用时，它们都必须有确定的值，以便
+    把这些值传送给形参。因此应预先用赋值，输入等办法使参数获得确定值。
+3、实参和形参在数量上，类型上、顺序上应严格一致，否则就会发生类型不匹配的错误。
+4、在一般传值调用的机制中只能把实参传送给形参，而不能把形参的值反向地传送给实参。因此在函数调用过程中，形参值发
+    生改变，而实参中的值不会变化。而在引用调用的机制当中是将实参引用的地址传递给了形参，所以任何发生在形参上的
+    改变实际上也发生在实参变量上。
+</pre>
 </body>
 
 
@@ -62,17 +90,19 @@
     });
 
     //    第三版
-    $.fn.highlight = function (options) {
-        // 合并默认值和用户设定值:
-        var opts = $.extend({}, $.fn.highlight.defaults, options);
-        this.css('backgroundColor', opts.backgroundColor).css('color', opts.color);
-        return this;
-    };
-    // 设定默认值:
-    $.fn.highlight.defaults = {
-        color: '#d85030',
-        backgroundColor: '#fff8de'
-    };
+    (function ($) {
+        $.fn.highlight = function (options) {
+            // 合并默认值和用户设定值:
+            var opts = $.extend({}, $.fn.highlight.defaults, options);
+            this.css('backgroundColor', opts.backgroundColor).css('color', opts.color);
+            return this;
+        };
+        // 设定默认值:
+        $.fn.highlight.defaults = {
+            color: '#d85030',
+            backgroundColor: '#fff8de'
+        };
+    })(jQuery);
     // 调用
     $.fn.highlight.defaults.color = '#659f13';
     $.fn.highlight.defaults.backgroundColor = '#f2fae3';
@@ -81,7 +111,6 @@
     $('#test-highlight p:last-child span').highlight({
         color: '#dd1144'
     });
-
 
 
 </script>
