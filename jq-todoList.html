@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<h2>To Do List</h2>
+
+<input type="text" id="new-text" /><button id="add">添加</button>
+
+<ul id="list">
+
+</ul>
+
+</body>
+<script>
+    function addListItem() {
+        var textToAdd = $('#new-text').val();                    // The finish class is just for css styling
+        $('#list').append('<li class="item"><input type="checkbox" class="finish" />' + textToAdd + '<button class="delete">删除</button></li>');
+        $('#new-text').val('');
+    }
+
+    function deleteItem() {
+        $(this).parent().remove();
+    }
+
+    $(document).ready(function() {
+        $('#add').on('click', addListItem);
+        $(document).on('click', '.delete', deleteItem);
+    });
+</script>
+</html>
