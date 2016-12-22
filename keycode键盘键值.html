@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="css/global.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <title>键盘各按键对应的数字</title>
+</head>
+<body>
+<pre>
+1、键盘各按键对应的数字
+keycode 8 = BackSpace  keycode 9 = Tab       keycode 12 = Clear
+keycode 13 = Enter     keycode 16 = Shift    keycode 17 = Control
+keycode 18 = Alt       keycode 19 = Pause    keycode 20 = CapsLock
+keycode 27 = Escape    keycode 32 = Space    keycode 33 = Prior
+keycode 34 = Next      keycode 35 = End      keycode 36 = Home
+keycode 37 = Left      keycode 38 = Up       keycode 39 = Right
+keycode 40 = Down      keycode 41 = Select   keycode 42 = Print
+keycode 43 = Execute   keycode 45 = Insert   keycode 46 = Delete
+keycode 47 = Help      keycode 48 = 0        keycode 49 = 1
+keycode 50 = 2         keycode 51 = 3        keycode 52 = 4
+keycode 53 = 5         keycode 54 = 6        keycode 55 = 7
+keycode 56 = 8         keycode 57 = 9        keycode 65 = A
+keycode 66 = B         keycode 67 = C        keycode 68 = D
+keycode 69 = E         keycode 70 = F        keycode 71 = G
+keycode 72 = H         keycode 73 = I        keycode 74 = J
+keycode 75 = K         keycode 76 = L        keycode 77 = M
+keycode 78 = N         keycode 79 = O        keycode 80 = P
+keycode 81 = Q         keycode 82 = R        keycode 83 = S
+keycode 84 = T         keycode 85 = U        keycode 86 = V
+keycode 87 = W         keycode 88 = X        keycode 89 = Y
+keycode 90 = Z         keycode 112 = F1      keycode 113 = F2
+keycode 114 = F3       keycode 115 = F4      keycode 116 = F5
+keycode 117 = F6       keycode 118 = F7      keycode 119 = F8
+keycode 120 = F9       keycode 121 = F10     keycode 122 = F11
+keycode 123 = F12
+</pre>
+
+<script>
+    //js
+    document.onkeyup = function (event) {
+        var e = event ? event : window.event;
+        if (e.keyCode == 32) {//旧版火狐、Opera使用e.which
+            alert('您按了空格键。');
+        }
+    };
+    //jq
+    $(document).on('keyup',function(event){
+        if (event.keyCode == 13) {
+            alert('您按了回车键。');
+        }
+    });
+
+</script>
+</body>
+</html>
