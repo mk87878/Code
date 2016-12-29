@@ -15,3 +15,20 @@ jQuery.fn.beforeload= function(options) {
     }).attr("src", options.src);
     return self;
 };
+
+// ;(function ($) {
+//     $.fn.load = function (options) {
+//         var setting = {
+//             src: "Images/pics/2009.jpg"
+//         };
+//         var $setting = $.extend({},setting,options || {});
+//         console.log($setting);
+//         var self = this;
+//         var img = new Image();
+//         $(img).load(function() {
+//             self.attr("src", $setting.src);
+//             self.fadeIn("slow");
+//         }).attr("src", $setting.src);
+//         return self;
+//     }
+// })(jQuery);
