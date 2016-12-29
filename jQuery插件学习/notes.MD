@@ -29,27 +29,28 @@ jQuery插件制作
 为了演示方便，再指定一个参数fontSize，允许调用插件的时候设置字体大小。 
 
     $.fn.myPlugin = function(options) {
-        var defaults = {        
-        'color': 'red',        
-        'fontSize': '12px'    
-        };    
-        var settings = $.extend(defaults, options);    
-        return this.css({        
-        'color': settings.color,        
-        'fontSize': settings.fontSize    
+        var defaults = {
+            'color': 'red',
+            'fontSize': '12px'
+        };
+        var settings = $.extend(defaults, options);
+        return this.css({
+            'color': settings.color,
+            'fontSize': settings.fontSize
         });
-        } 
+    };
+       
 现在，我们调用的时候指定颜色，字体大小未指定，会运用插件里的默认值12px。 
 
     $('a').myPlugin({    
-    'color': '#2C9929'
+        'color': '#2C9929'
     }); 
 
 同时指定颜色与字体大小： 
 
     $('a').myPlugin({    
-    'color': '#2C9929',    
-    'fontSize': '20px'
+        'color': '#2C9929',    
+        'fontSize': '20px'
     }); 
 
 
@@ -63,15 +64,22 @@ jQuery插件制作
         var defaults = {
                 'color': 'red',
                 'fontSize': '12px'
-                };    
-        var settings = $.extend({},defaults, options);//将一个空对象做为第一个参数    
+             };   
+              
+        var settings = $.extend({},defaults, options);//将一个空对象做为第一个参数
+         
         return this.css({        
-        'color': settings.color,        
-        'fontSize': settings.fontSize    
+            'color': settings.color,        
+            'fontSize': settings.fontSize    
         });
     }
                  
 到此，插件可以接收和处理参数后，就可以编写出更健壮而灵活的插件了。若要编写一个复杂的插件，代码量会很大，如何组织代码就成了一个需要面临的问题，没有一个好的方式来组织这些代码，整体感觉会杂乱无章，同时也不好维护，所以将插件的所有方法属性包装到一个对象上，用面向对象的思维来进行开发，无疑会使工作轻松很多。 
+####QAQ
+
+    var opts = $.extend({}, $.fn.hilight.defaults, options); //将一个空对象做为第一个参数
+    //把$.fn.hilight.defaults的属性和options的属性复制到一个空的对象里,并返回这个对象.(浅度复制,后面的同名属性会覆盖前面的). 
+
 
 ###面向对象的插件开发 
 
@@ -95,10 +103,7 @@ jQuery插件制作
             'textDecoration':'none'
         };
         this.options = $.extend({}, this.defaults, opt)};
-        /*
-        把$.fn.hilight.defaults的属性和options的属性复制到一个空的对象里,并返回这个对象.
-        (浅度复制,后面的同名属性会覆盖前面的). 
-        */
+        
     //定义Beautifier的方法
     Beautifier.prototype = {
         beautify: function() {
@@ -155,7 +160,7 @@ jQuery插件制作
 如上面我们定义了一个Beautifier全局变量，它会被附到全局的window对象上，为了防止这种事情发生，你或许会说，把所有代码放到jQuery的插件定义代码里面去啊，也就是放到$.fn.myPlugin里面。这样做倒也是种选择。但会让我们实际跟插件定义有关的代码变得臃肿，而在$.fn.myPlugin里面我们其实应该更专注于插件的调用，以及如何与jQuery互动。 
 
 
-
 > [文章出处传送门][1] 文章为方便自己，有部分修改
+
 
 [1]: http://www.iteye.com/topic/1144813
