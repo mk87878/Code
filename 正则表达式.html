@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>正则</title>
+<style type="text/css">
+*{
+	
+	font-size:12px;
+	line-height:23px;
+}
+</style>
+</head>
+
+<body>
+<table width="800" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>
+      <th width="15%" scope="col">语法</th>
+      <th scope="col">说明</th>
+      <th width="15%" scope="col">表达式实例</th>
+      <th width="15%" scope="col">完整匹配的字符串</th>
+    </tr>
+        <tr>
+      <th colspan="4" scope="col">字符</th>
+    </tr>
+
+    <tr>
+      <td>一般字符</td>
+      <td>匹配自生</td>
+      <td>abc</td>
+      <td>abc</td>
+    </tr>
+    <tr>
+      <td>.</td>
+      <td><p>匹配任意除换行符&quot;\n&quot;外的字符。<br>
+      在DOTALL模式中也能匹配换行符</p></td>
+      <td>a.c</td>
+      <td>abc</td>
+    </tr>
+    <tr>
+      <td>\</td>
+      <td>转义字符，使后一个字符改变原来的意思。<br>
+        如果字符串中有字符*需要匹配，可以使用\*或者字符集[*]。</td>
+      <td>a\.c<br>
+      a\\c</td>
+      <td>a.c<br>
+      a\c</td>
+    </tr>
+    <tr>
+      <td>[...]</td>
+      <td><p>字符集（字符类）。对应的位置可以是字符集中任意字符。字符集中的字符可以逐个列出，也可以给出范围，如[abc]或[a-c]。第一个字符如果是^则表示取反，如[^abc]表示不是abc的其他字符。<br>
+      所有的特殊字符在字符集中都失去其原有的特殊含义。在字符集中如果要使用],-,^，可以在前面加上反斜杠，或把],-放在第一个字符，把</p></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
