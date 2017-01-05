@@ -13,7 +13,7 @@ req.url ，所有这些方法都由 Express 添加）。
 
 一个数组，包含命名过的路由参数。我们将在第 14 章进行详细介绍。
 
-- req.param(name) 
+- req.param(name)
 
 返回命名的路由参数，或者 GET 请求或 POST 请求参数。建议你忽略此方法。
 
