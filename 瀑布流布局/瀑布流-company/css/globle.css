@@ -1,0 +1,45 @@
+﻿@charset "utf-8";
+/* CSS Document */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, dd, dl, dt, li, ol, ul,input,select,button,textarea { padding:0; margin:0; border:none;}
+input,button,select,textarea,a,img{outline:none; }/*去掉超链接或按钮点击时出现的虚线框黄色边框*/
+::-moz-focus-inner{border:0px;}/*火狐的私有属性去掉点击时边框*/
+body,html{ width:100%; font-family:"Microsoft YaHei","Arial", "SimSun"; overflow-x: hidden;}
+ul, ul li, ol li, li {	list-style:none;}
+a, img, input, textarea {border:none;}
+a{text-decoration:none;}
+table {	border-collapse: collapse;border-spacing:0;}
+.clearfix:after {visibility: hidden;display: block;font-size: 0;content: ".";clear: both;height: 0;}
+* html .clearfix {zoom: 1;}
+*:first-child + html .clearfix {zoom: 1;}
+.fl {	float:left;}
+.fr {	float:right;}
+.none{	display:none;}
+.tc{text-align:center;}
+body{background-color: #f2f2f2;}
+.public_warp{width: 1200px;margin: 30px auto 0;padding-bottom: 60px;}
+/*引入字体图标*/
+@font-face {font-family: "iconfont";src: url('iconfont/font.eot'); /* IE9*/src: url('iconfont/font.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('iconfont/font.woff') format('woff'), /* chrome、firefox */url('iconfont/font.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/url('iconfont/font.svg#iconfont') format('svg'); /* iOS 4.1- */}
+.iconfont {font-family:'iconfont' !important;font-style:normal;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
+/*display:inline-block;兼容写法*/
+.inrow{font-size:0;[;font-size:12px;];*font-size:0;font-family:arial;[;letter-spacing:-3px;];*letter-spacing:normal;*word-spacing:-1px;}
+.inrow>li {display:inline-block;*display:inline;*zoom:1;font-size:14px;letter-spacing:normal;word-spacing:normal; }
+
+.hint_box{padding-top:10px; text-align:center; font:normal 16px/16px "Microsoft YaHei"; color:#666;}
+/*----------------------------列表----------------------------*/
+/*素材库瀑布流列表*/
+.water_fall{position:relative; max-width:1500px; min-width:1200px; margin: 30px auto 0; padding-bottom:20px; overflow: hidden; }
+.water_fall li{position:absolute;  float:left;}
+.water_fall .water_box{display: block; width: 266px; padding: 6px 6px 0 6px; margin:0 10px 15px 10px; margin-bottom:15px; background:#fff; overflow: hidden;  border: 1px solid #ddd; -webkit-transition: all .2s linear;transition: all .2s linear;}
+.water_fall .material_img{position:relative; background:url(../images/logo.png) #e2e2e2 no-repeat center;}
+.water_fall .material_img img{vertical-align: top;width: 100%;}
+.water_bg{position: absolute; top: 0; left: 0; display:none; width:100%; height:100%; font-size:14px; color:#b2b2b2;line-height:438px;text-align:center;background-color: rgba(0,0,0,.3);}
+.water_icon{position: absolute; top: 20px; left: 20px; z-index:2; transform: translateY(-200%); transition: transform .3s;}
+.water_icon .iconfont{float:left; display: block; width: 38px; height: 32px;margin-right:5px; text-align: center; line-height: 32px; font-size: 16px;color: #fff;cursor: pointer; border-radius:3px;background-color: rgba(0,0,0,.4);}
+.water_icon .cancel{width:auto; padding:0 10px; font:normal 14px/32px "Microsoft YaHei"; color:#fff;}
+.water_icon .iconfont:hover,.water_icon .iconfont.curr{background-color: rgba(0,0,0,.6);}
+.water_fall  .tit_p{display:block; height:50px; padding-left:15px; line-height:50px; font-size: 15px; color: #454545; background-color: #fff;}
+.water_fall li:hover .water_box{border: 1px solid #ff9000;  -webkit-box-shadow: 0 8px 10px rgba(0,0,0,0.1);box-shadow: 0 8px 10px rgba(0,0,0,0.1); }
+.water_fall li:hover .water_bg{display:block;}
+.water_fall li:hover .water_icon{display:block;  transform: translateY(0%); transition: transform .3s;}
+
+ 

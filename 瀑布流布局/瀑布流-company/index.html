@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>瀑布流</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+<link rel="stylesheet" href="css/globle.css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<body> 
+<div id="water_box">
+    <ul id="flow_box" class="water_fall clearfix" style="height: 678px;">
+    <li class="water_li" >
+        <div class="water_box">
+            <p class="material_img" >
+                <img src="images/1.jpg"   style="display: inline;">
+                <a class="water_bg"></a> 
+            </p>
+            <a class="tit_p">IMG_0019</a>
+        </div>
+    </li> 
+    <li class="water_li" >
+        <div class="water_box">
+            <p class="material_img" >
+                <img src="images/2.jpg"   style="display: inline;">
+                <a class="water_bg"></a> 
+            </p>
+            <a class="tit_p">IMG_0019</a>
+        </div>
+    </li> 
+    <li class="water_li" >
+        <div class="water_box">
+            <p class="material_img" >
+                <img src="images/3.jpg"   style="display: inline;">
+                <a class="water_bg"></a> 
+            </p>
+            <a class="tit_p">IMG_0019</a>
+        </div>
+    </li> 
+    <li class="water_li" >
+        <div class="water_box">
+            <p class="material_img" >
+                <img src="images/4.jpg"   style="display: inline;">
+                <a class="water_bg"></a> 
+            </p>
+            <a class="tit_p">IMG_0019</a>
+        </div>
+    </li> 
+    <li class="water_li" >
+        <div class="water_box">
+            <p class="material_img" >
+                <img src="images/5.jpg"   style="display: inline;">
+                <a class="water_bg"></a> 
+            </p>
+            <a class="tit_p">IMG_0019</a>
+        </div>
+    </li> 
+    <li class="water_li" >
+        <div class="water_box">
+            <p class="material_img" >
+                <img src="images/6.jpg"   style="display: inline;">
+                <a class="water_bg"></a> 
+            </p>
+            <a class="tit_p">IMG_0019</a>
+        </div>
+    </li> 
+    <li class="water_li" >
+        <div class="water_box">
+            <p class="material_img" >
+                <img src="images/7.jpg"   style="display: inline;">
+                <a class="water_bg"></a> 
+            </p>
+            <a class="tit_p">IMG_0019</a>
+        </div>
+    </li> 
+    <li class="water_li" >
+        <div class="water_box">
+            <p class="material_img" >
+                <img src="images/8.jpg"   style="display: inline;">
+                <a class="water_bg"></a> 
+            </p>
+            <a class="tit_p">IMG_0019</a>
+        </div>
+    </li> 
+    <li class="water_li" >
+        <div class="water_box">
+            <p class="material_img" >
+                <img src="images/9.jpg"   style="display: inline;">
+                <a class="water_bg"></a> 
+            </p>
+            <a class="tit_p">IMG_0019</a>
+        </div>
+    </li> 
+    <li class="water_li" >
+        <div class="water_box">
+            <p class="material_img" >
+                <img src="images/10.jpg"   style="display: inline;">
+                <a class="water_bg"></a> 
+            </p>
+            <a class="tit_p">IMG_0019</a>
+        </div>
+    </li> 
+    <li class="water_li" >
+        <div class="water_box">
+            <p class="material_img" >
+                <img src="images/11.jpg"   style="display: inline;">
+                <a class="water_bg"></a> 
+            </p>
+            <a class="tit_p">IMG_0019</a>
+        </div>
+    </li> 
+    <li class="water_li" >
+        <div class="water_box">
+            <p class="material_img" >
+                <img src="images/12.jpg"   style="display: inline;">
+                <a class="water_bg"></a> 
+            </p>
+            <a class="tit_p">IMG_0019</a>
+        </div>
+    </li> 
+  </ul>
+</div>
+
+<script src="js/waterFall.js" type="text/javascript"></script>
+<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script>
+   waterfall('flow_box','water_li'); 
+   var loadMaterial = (function() {
+		var loading =false ,
+			page    = 1,
+			pagesize=10
+		return function() {
+				page=page+1; 
+				var temp="";
+					for(var i=0;i<pagesize;i++){
+					temp+='    <li class="water_li" ><div class="water_box"><p class="material_img" ><img src="images/'+(i+1)+'.jpg"   style="display: inline;"><a class="water_bg"></a> </p> <a class="tit_p">IMG_0019</a></div></li> ';
+				}
+			 
+				$("#flow_box").append(temp);
+				  waterfall('flow_box','water_li');
+		}
+	})();
+	loadMaterial();
+	$(window).on('scroll',function(){
+		var scrollTop = $(document).scrollTop(),
+				windowH = $(window).height(),
+				documentH = $(document).height(),
+				nowH = scrollTop + windowH;
+		if( nowH >= documentH - 550 ){
+			loadMaterial();
+		}
+  });
+</script>
+</body>
+</html>
