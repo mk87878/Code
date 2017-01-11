@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            line-height: 30px;
+        }
+        body{
+            margin: 10px;
+        }
+        ul li{
+            float: left;
+            width: 50px;
+            height: 30px;
+            border: 1px solid #2acdaa;
+            list-style: none;
+            display: block;
+        }
+        ul .tab{
+            background: #2acdaa;
+        }
+        #box div{
+            clear: both;
+            display: none;
+            width: 154px;
+            height: 70px;
+            border:1px solid #2acdaa;
+        }
+        #box .block{
+            display: block;
+        }
+    </style>
+    <script src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+<ul id="ul">
+    <li class="tab">tab1</li>
+    <li>tab2</li>
+    <li>tab3</li>
+</ul>
+<div id="box">
+    <div class="block">div1</div>
+    <div>div2</div>
+    <div>div3</div>
+</div>
+<script>
+    $('#ul li').on(function(){//给tab标签绑定点击事件
+        $(this).addClass('tab').siblings().removeClass('tab');//点击后给点击的对象添加tab样式,其他对象移除tab样式
+//    console.log($(this).index());
+        $('#box>div').eq($(this).index()).show().siblings().hide();//点击后显示点击的对象对于的div,其他div隐藏【eq（）为索引遍历】
+    })
+</script>
+</body>
+</html>
