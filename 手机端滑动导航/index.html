@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+    <meta name="applicable-device" content="mobile"/>
+    <meta name="apple-mobile-web-app-title" content="滑动导航">
+    <!-- 添加到主屏后的标题（iOS 6 新增） -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- 是否启用 WebApp 全屏模式 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <link href="../css/global-mobile.css" rel="stylesheet" type="text/css">
+    <script src="../js/jquery-1.8.3.min.js"></script>
+    <title>滑动导航</title>
+    <style>
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        .navBox {
+            width: 100%;
+            height: 40px;
+            font:bold 14px/40px "Helvetica";
+            background-color: red;
+            overflow-x: scroll;
+            overflow-y: hidden;
+        }
+        .navBox ul{
+            width: 800px;
+            height: 100%;
+        }
+        .navBox li{
+            float: left;
+            width: 100px;
+            height: 100%;
+            display: inline-block;
+            text-align: center;
+
+        }
+        .navBox a{
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navBox">
+        <ul>
+        <li><a href="#">导航01</a></li>
+        <li><a href="#">导航02</a></li>
+        <li><a href="#">导航03</a></li>
+        <li><a href="#">导航04</a></li>
+        <li><a href="#">导航05</a></li>
+        <li><a href="#">导航06</a></li>
+        <li><a href="#">导航07</a></li>
+        <li><a href="#">导航08</a></li>
+        </ul>
+    </div>
+</body>
+</html>
