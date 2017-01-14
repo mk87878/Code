@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Sticky Footer: 完美的CSS绝对底部</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <style type="text/css">
+        * {
+            margin: 0;
+        }
+        html, body {
+            height: 100%;
+        }
+        .page-wrap {
+            min-height: 100%;
+            /* equal to footer height */
+            margin-bottom: -142px;
+        }
+        .page-wrap:after {
+            content: "";
+            display: block;
+        }
+        .site-footer, .page-wrap:after {
+            height: 142px;
+        }
+        .site-footer {
+            background: #00ffc0;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page-wrap">
+
+    Content!
+    <a href="http://www.tuicool.com/articles/7ryUB3">http://www.tuicool.com/articles/7ryUB3</a>
+
+</div>
+
+<footer class="site-footer">
+    I'm the Sticky Footer.
+</footer>
+
+</body>
+
+</html>
