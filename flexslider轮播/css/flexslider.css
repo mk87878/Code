@@ -1,0 +1,38 @@
+/* Browser Resets */
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus  {outline: none;}
+
+/* FlexSlider Necessary Styles
+*********************************/ 
+.flexslider {margin: 0; padding: 0;height:100%;}
+.flexslider .slides > li {display: block; width: 396px; height: 297px; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img {width:100%; height:100%;display: block;}
+.flex-pauseplay span {text-transform: capitalize;}
+
+
+/*.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}*/
+html[xmlns] .slides {display: block;}
+* html .slides {height: 1%;}
+/*没有JavaScript回退*/
+/*如果你不使用一个脚本，如Modernizr，确保你包括JS，消除这类页面加载*/
+.no-js .slides > li:first-child {display: block;}
+
+/*去除a两侧图片*/
+.flex-direction-nav{display: none;}
+
+/*FlexSlider默认主题*/
+.flexslider {position: relative; overflow: hidden; float: left; width: 396px ; height: 297px; margin-right: 12px!important; background: #fff;}
+.flex-viewport {max-height: 2000px;width:100%;height:100%; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; transition: all 1s ease;}
+.loading .flex-viewport {max-height: 300px;}
+.flexslider .slides {zoom: 1;height:100%;}
+
+.carousel li {margin-right: 5px}
+
+/*轮播底部圆点*/
+.flex-control-nav {width: 30%; position: absolute; right: 7px; bottom: 12px; text-align: right;}
+.flex-control-nav li {margin-right: 3px; display: inline-block; zoom: 1; *display: inline;}
+.flex-control-paging li a { display: block; width:15px; height:15px; line-height: 15px; text-align: center; color: #333; background: #fff; cursor: pointer;}
+.flex-control-paging li a:hover{text-decoration: none; color: #fff; background: #f2960c;}
+.flex-control-paging li a.flex-active { text-decoration: none; color: #fff; background: #f2960c; }
