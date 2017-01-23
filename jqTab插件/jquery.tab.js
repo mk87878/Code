@@ -43,12 +43,4 @@
         return this;
     };
 
-// //调用
-//     $(function(){
-//         $('.tab').tab({
-//             eventType:'mouseover'
-//         });
-//         $('.tab2').tab();
-//     });
-
 })(jQuery);
